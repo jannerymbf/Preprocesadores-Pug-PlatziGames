@@ -1,13 +1,4 @@
--var title = "Título Principal"
--var titles = ["Título Principal", "Subtítulo 1", "Subtítulo 2", "Subtítulo 3"]
--var user = "David"
-mixin box(image, tit, content)
-	.caja
-				.caja__imagen: img(src="images/"+image)
-				.caja__contenido
-					h3 #{tit}
-					p #{content}
-
+include components/config.pug
 doctype html
 html
 	include components/head.pug
@@ -30,4 +21,5 @@ html
 			+box('imagen.png', titles[1], 'Lorem ipsum dolor sit amet consectetur adipisicing elit.')
 			+box('imagen.png', titles[2], 'Lorem ipsum dolor sit amet consectetur adipisicing elit.')
 			+box('imagen.png', titles[3], 'Lorem ipsum dolor sit amet consectetur adipisicing elit.')
+		include components/footer.pug
 			

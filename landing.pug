@@ -1,6 +1,14 @@
 -var title = "Título Principal"
 -var titles = ["Título Principal", "Subtítulo 1", "Subtítulo 2", "Subtítulo 3"]
 -var user = "David"
+mixin box(image, tit, content)
+	.caja
+				.caja__imagen: img(src="images/"+image)
+				.caja__contenido
+					h3 #{tit}
+					p #{content}
+					a.boton Leer más
+
 doctype html
 html
 	head
@@ -21,6 +29,8 @@ html
 					| Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente dolorum recusandae dolor perspiciatis exercitationem! Mollitia veritatis nihil, eum dolores eveniet earum laboriosam nisi blanditiis voluptatum molestias eius! 
 					span Assumenda, doloremque iure!
 				a.boton Leer más
-		ul
-			each title in titles
-				li #{title}
+		main.contenido
+			+box('imagen.png', titles[1], 'Lorem ipsum dolor sit amet consectetur adipisicing elit.')
+			+box('imagen.png', titles[2], 'Lorem ipsum dolor sit amet consectetur adipisicing elit.')
+			+box('imagen.png', titles[3], 'Lorem ipsum dolor sit amet consectetur adipisicing elit.')
+			

@@ -7,13 +7,10 @@ mixin box(image, tit, content)
 				.caja__contenido
 					h3 #{tit}
 					p #{content}
-					a.boton Leer más
 
 doctype html
 html
-	head
-		meta(charset="UTF-8")
-		link(rel="stylesheet",href='css/ejercicio-pug.css')
+	include components/head.pug
 	body
 		header
 			h1 PlatziGames
